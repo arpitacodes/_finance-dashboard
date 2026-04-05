@@ -1,0 +1,280 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+/* Body styling */
+body {
+  /* font-family: Arial, sans-serif; */
+  font-family: serif;
+  background-color: #f1f5f9;
+  color: #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #1e293b;
+  color: white;
+}
+
+.navbar h1 {
+  font-size: 20px;
+}
+
+#roleSelect {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+}
+#roleText {
+  font-size: 14px;
+}
+
+
+
+/* card */
+
+.cards {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.card p {
+  font-size: 20px;
+  font-weight: bold;
+}
+/* + add Botton */
+#addBtn {
+  padding: 10px 15px;
+  background: #1e293b;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  margin-left: 24px;
+}
+
+/* Filter */
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  place-self: center;
+  text-align-last: center;
+}
+
+.filters input,
+.filters select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #1e293b;
+}
+
+
+/* Tranjection  */
+
+.transactions {
+  padding: 20px;
+}
+
+.transactions h2 {
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background: #1e293b;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.insights {
+  padding: 20px;
+  background: white;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.insights h2 {
+  margin-bottom: 10px;
+}
+
+
+
+/* + Add Transcation Form */
+
+/* **************************** */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+
+  display: none; /* hidden initially */
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay.active {
+  display: flex;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: -2px -2px 10px #0f141d;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* button#closeModal {
+    width: 70px;
+    place-self: center;
+    padding: 5px;
+    border-radius: 5px;
+} */
+.modal input,
+.modal select {
+  padding: 8px;
+  border-radius: 5px;
+}
+
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  place-self: center;
+  margin: 10px 0;
+}
+
+button#submitBtn, #addMoreBtn, #resetBtn {
+    padding: 5px;
+    border-radius: 5px;
+    font-family: serif;
+}
+
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+
+
+
+/* RESPONSIVE */
+
+img {
+  max-width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Table */
+
+.table-container {
+  overflow-x: auto;
+}
+
+/*  Btns */
+@media (max-width: 600px) {
+  #addBtn {
+       width: 70%;
+       justify-self: center;
+  }
+}
+
+/* Models */
+@media (max-width: 500px) {
+  .modal {
+    width: 80%;
+  }
+}
+
+/* INSIGHTS */
+@media (max-width: 600px) {
+  .insights {
+    margin: 10px;
+    padding: 15px;
+  }
+}
+
+
+/* Dark mode */
+
+/* DARK MODE */
+/* body.dark {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+body.dark .navbar {
+  background-color: #020617;
+}
+
+body.dark .card,
+body.dark .transactions,
+body.dark .insights,
+body.dark .modal {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+body.dark table th {
+  background-color: #020617;
+}
+
+body.dark tr:nth-child(even) {
+  background-color: #1e293b;
+} */

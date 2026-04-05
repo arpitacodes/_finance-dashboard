@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Dashboard</title>
+     <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+    
+    <header class="navbar">
+        <h1>Finance Dashboard</h1>
+
+        <div>
+             <span id="roleText">Hello, Viewer</span>
+             <select id="roleSelect">
+                <option value="viewer">Viewer</option>
+                <option value="admin">Admin</option>
+             </select>
+        </div>
+        <!-- <button id="darkModeToggle">🌙</button> -->
+    </header>
+
+
+    <main>
+     <!-- Short info. -->
+        <section class="cards">
+            <div class="card">
+                <h3>Total Balance</h3>
+                <p id="balance">₹0</p>
+            </div>
+
+            <div class="card">
+                <h3>Income</h3>
+                <p id="income">₹0</p>
+            </div>
+
+            <div class="card">
+                <h3>Expenses</h3>
+                <p id="expenses">₹0</p>
+            </div>
+        </section>
+
+        <!-- + Add Transaction -->
+        <button id="addBtn" style="display: none;">+ Add Transaction</button>
+
+        <!-- filter Data -->
+
+        <div class="filters">
+            <input type="text" id="searchInput" placeholder="Search category..." />
+
+            <select id="filterType">
+                <option value="all">All</option>
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+        </div>
+        <!-- TRANSACTIONS TABLE -->
+        <div class="table-container">
+            <section class="transactions">
+                <h2>Transactions</h2>
+
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Category</th>
+                        <th>Type</th>
+                    </tr>
+                    </thead>
+                    <tbody id="transactionTable">
+                    <!-- Data will come from JS -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        
+
+
+        <section class="insights">
+            <h2>Insights</h2>
+
+            <p id="topCategory"></p>
+            <p id="totalExpenseText"></p>
+        </section>
+
+
+        <!-- + Add Transcation Form -->
+       
+        <div id="overlay" class="overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Add Transaction</h3>
+                <span id="closeModal" class="close-btn">✖</span>
+            </div>
+
+            <input type="date" id="tDate" />
+            <input type="number" id="tAmount" placeholder="Amount" />
+            <input type="text" id="tCategory" placeholder="Category" />
+
+            <select id="tType">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+            </select>
+
+            <div class="form-buttons">
+            <button id="submitBtn">Submit</button>
+            <button id="addMoreBtn">Add More</button>
+            <button id="resetBtn">Reset</button>
+            </div>
+            
+        </div>
+        </div>
+    
+    
+    </main>
+
+
+
+
+</body>
+<script src="script.js"></script>
+</html>
